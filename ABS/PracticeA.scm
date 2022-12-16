@@ -1,0 +1,6 @@
+(let ([a (read)][b (read)][c (read)])
+  (display (+ a (+ b c)))
+  (display " ")
+  (read-line)
+  (display (read-line))
+)
