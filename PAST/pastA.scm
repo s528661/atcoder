@@ -1,0 +1,6 @@
+(let ([S (read)])
+  (if (number? S)
+    (display (* S 2))
+    (display "error")
+  )
+)
