@@ -1,0 +1,18 @@
+(define (f n i prev)
+  (if (= i (- n 1))
+    (newline)
+    (let ([inp (read)])
+      (cond
+        ((> inp prev) (begin (display "up") (display " ") (display (- inp prev))))
+        ((< inp prev) (begin (display "down") (display " ") (display (- prev inp))))
+        ((= inp prev) (begin (display "stay")))
+      )
+      (newline)
+      (f n (+ i 1) inp)
+    )
+  )
+)
+
+(let ([N (read)])
+  (f N 0 (read))
+)
