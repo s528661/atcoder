@@ -1,0 +1,11 @@
+(define (mklst n)
+  (if (= n 0)
+    '()
+    (cons (read) (mklst (- n 1)))
+  )
+)
+
+(let* ((N (read))
+    (data (mklst N)))
+  (print data)
+)
