@@ -1,0 +1,15 @@
+(define (f n i x boo)
+  (if (= i n)
+    boo
+    (let ((y (read)))
+      (if (= x y)
+        (f n (+ i 1) x "Yes")
+        (f n (+ i 1) x boo)
+      )
+    )
+  )
+)
+
+(let ([N (read)][X (read)])
+  (print (f N 0 X "No"))
+)
